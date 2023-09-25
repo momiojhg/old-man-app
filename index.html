@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <script>
+      var coverSupport = 'CSS' in window && typeof CSS.supports === 'function' && (CSS.supports('top: env(a)') ||
+        CSS.supports('top: constant(a)'))
+      document.write(
+        '<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0' +
+        (coverSupport ? ', viewport-fit=cover' : '') + '" />')
+    </script>
+    <title>注册界面</title>
+	<link rel="stylesheet" href="static/stylesheet/first page.css">
+    <!--preload-links-->
+    <!--app-context-->
+  </head>
+  <body>
+	  <!-- 头部 -->
+	  <div id="app">
+	  	<img src="static/login first.jpg" alt="统信新青年" class="firstphoto">
+		<br><br><br><br><br><br><br><br><br>
+		<!-- 登录部分 -->
+		<div class="group" class="firstgroup">
+		  <div class="item"><span class="bold-and-large">Welcome.</span></div>
+		  <div class="item"><span class="light-and-small">创建一个账户</span></div><br>
+		  <div class="input-container">
+		    <label for="phone" class="bolder-and-small">手机号码</label><br>
+			<!-- 引入 Font Awesome 的样式文件 -->
+			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+			<i class="fas fa-phone"></i>
+		    <input type="tel" id="phone" name="phone" placeholder="+86 请输入手机号码" class="custom-input"><br><br>
+			<script>
+			  const input = document.getElementById('input');
+			  const placeholder = document.querySelector('.custom-input-placeholder');
+			
+			  input.addEventListener('input', function() {
+			    if (this.value) {
+			      placeholder.style.opacity = '0';
+			    } else {
+			      placeholder.style.opacity = '1';
+			    }
+			  });
+			</script>
+			<div class="input-container-lock">
+			  <label for="password" class="bolder-and-small">密码</label><br>
+						<!-- 引入 Font Awesome 的样式文件 -->
+						<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+						<i class="fas fa-lock"></i>
+			  <input type="password" id="password" name="password" placeholder="请输入密码" class="custom-input"><br><br>
+			  
+			  
+
+			<script>
+			  const input = document.getElementById('input');
+			  const placeholder = document.querySelector('.custom-input-placeholder');
+			
+			  input.addEventListener('input', function() {
+			    if (this.value) {
+			      placeholder.style.opacity = '0';
+			    } else {
+			      placeholder.style.opacity = '1';
+			    }
+			  });
+			</script>
+		  </div>
+		  
+		<div class="item">
+			<label>
+				<input type="checkbox" name="task" value="completed">
+			</label>
+			<span class="small">我已同意并知晓
+			<a class="underline-button">《用户服务》</a>
+			<a class="underline-button">《隐私服务》</a>
+			</span>
+		</div><br>
+		<div style="display: flex; justify-content: center;">
+			  <button id="register-button" class="centered-button">
+				  注册
+			  </button>
+		</div>
+		<br>
+		<div class="center">
+			<div class="underline-button">其他登录方式
+			</div>
+			<br>
+		</div>
+		<div class="item">
+			<span class="small-center">已有账号？ <br>
+				<span class="small">
+					<a class="underline-button">登录</a>
+				</span>
+			</span>
+			</div>
+		</div>
+	  </div>
+	  
+   
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
+
